@@ -77,17 +77,20 @@ public class Day1_Rajaruban_Works {
 	
 	public static void launchBrowserUsingSelenium(String url) {
 		// Launch Chrome browser using Selenium
-				System.setProperty(
-			            "webdriver.chrome.driver",
-			            "C:\\Users\\User\\Documents\\chromedriver-win64\\chromedriver.exe");
-			        // Instantiate a ChromeDriver class.
-			        WebDriver driver = new ChromeDriver();
-			 
-			        // Maximize the browser
-			        driver.manage().window().maximize();
-			 
-			        // Launch Website
-			        driver.get(url);
+		System
+			.setProperty(
+				"webdriver.chrome.driver",
+				"C:\\Users\\User\\Documents\\chromedriver-win64\\chromedriver.exe"
+			);
+		
+        // Instantiate a ChromeDriver class.
+        WebDriver driver = new ChromeDriver();
+ 
+        // Maximize the browser
+        driver.manage().window().maximize();
+	 
+        // Launch Website
+        driver.get(url);
 	}
 	
 	public static String checkIsEvenOrOdd(int val) {
@@ -134,37 +137,5 @@ public class Day1_Rajaruban_Works {
 		}
 
 		return val * factorialCalculator(val - 1);
-	}
-	
-	public static void main(String[] args) {
-//		Day1_Rajaruban_Works d1 = new Day1_Rajaruban_Works();
-//		
-//		d1.x = 2;
-//		d1.y = 3;
-//		
-//		int x = d1.x;
-//		int y = d1.y;
-//		
-//		System.out.println("Sum of two numbers: " + sumOfTwoNumbers(x, y));
-		
-//		swapTwoNumbers(x, y);
-		
-//		System.out.println(printGrades(81));
-		
-//		printTableOfNine();
-		
-//		launchBrowserUsingSelenium("https://www.google.com/");
-		
-//		System.out.println(checkIsEvenOrOdd(99));
-		
-//		double[] numArray = {5, 6, 4, 30, 1, 2, 0.5};
-//		System.out.println(findMinAndMax(numArray));	
-		
-		System.out.println(checkIsPalindrome("kayak"));
-		
-		long factorial = 20;
-		long result = factorialCalculator(factorial);
-		System.out.println("Factorial for " + factorial + " is " + result);	
-	}
-	
+	}	
 }
