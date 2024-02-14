@@ -126,7 +126,7 @@ public class Day1_Rajaruban_Works {
 		formattedStr = String.join("", strArr);
 		String reversedStr = String.join("", reversedArr);
 
-		return str + (formattedStr.contentEquals(reversedStr) ? " is " : " not ") + "Palindrome string";
+		return str + (formattedStr.contentEquals(reversedStr) ? " is " : " not ") + "a Palindrome string";
 	}
 	
 	
