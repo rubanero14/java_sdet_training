@@ -18,7 +18,6 @@ public class Day1_Rajaruban_Works {
 	
 	public static String printGrades(int percentage) {
 		String grade;
-		
 		if(percentage > 80) {
 			grade = "Distiction";
 		} else if(percentage >= 60 && percentage <= 80) {
