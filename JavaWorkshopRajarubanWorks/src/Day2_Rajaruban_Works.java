@@ -18,19 +18,19 @@ public class Day2_Rajaruban_Works {
 		return result;
 	}
 	
-	protected static int[] deleteByIndexOnArray(int[] arr, int index) {
+	protected static int[] deleteByIndexOnArray(int[] arr, int indexToDelete) {
 		int arrLength = arr.length;
 		int[] newArr = new int[arrLength - 1];
 		int newArrIndex = 0;
 		
 		try {
 			for(int i = 0; i < arrLength; i++) {
-				if(i != index) {
+				if(i != indexToDelete) {
 					newArr[newArrIndex] = arr[i];
 					newArrIndex++;
 					System.out.println("Added into newArray: " + arr[i]);
 				} else {
-					System.out.println("Removed: " + arr[i] + " from index: " + index);
+					System.out.println("Removed: " + arr[i] + " from index: " + indexToDelete);
 				}
 			}
 		} catch(ArrayIndexOutOfBoundsException e) {
