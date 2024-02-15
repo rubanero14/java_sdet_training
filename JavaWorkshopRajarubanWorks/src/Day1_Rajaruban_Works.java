@@ -2,21 +2,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.*;
 
-public class Day1_Rajaruban_Works {
+class Day1_Rajaruban_Works {
 	int x, y;
 	
-	public static int sumOfTwoNumbers(int x, int y) {
+	protected static int sumOfTwoNumbers(int x, int y) {
 		return x + y;
 	}
 	
-	public static void swapTwoNumbers(int x, int y) {
+	protected static void swapTwoNumbers(int x, int y) {
 		int z = y;
 		y = x;
 		x = z;
 		System.out.println("Value of X: " + x + " and value of Y: " + y);
 	}
 	
-	public static String printGrades(int percentage) {
+	protected static String printGrades(int percentage) {
 		String grade;
 		if(percentage > 80) {
 			grade = "Distiction";
@@ -31,7 +31,7 @@ public class Day1_Rajaruban_Works {
 		return grade;
 	}
 	
-	public static String showDayName(int number1) {
+	protected static String showDayName(int number1) {
 		String day;
 		switch(number1) {
 			case 1:
@@ -62,7 +62,7 @@ public class Day1_Rajaruban_Works {
 		return day;
 	}
 	
-	public static void printTableOfNine() {
+	protected static void printTableOfNine() {
 		boolean keepCounting = true;
 		while(keepCounting) {
 			for(int i = 1; i <= 9; i++) {
@@ -74,13 +74,9 @@ public class Day1_Rajaruban_Works {
 		};
 	}
 	
-	public static void launchBrowserUsingSelenium(String url) {
+	protected static void launchBrowserUsingSelenium(String url) {
 		// Launch Chrome browser using Selenium
-		System
-			.setProperty(
-				"webdriver.chrome.driver",
-				"C:\\Users\\User\\Documents\\chromedriver-win64\\chromedriver.exe"
-			);
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\User\\Documents\\chromedriver-win64\\chromedriver.exe");
 		
         // Instantiate a ChromeDriver class.
         WebDriver driver = new ChromeDriver();
@@ -92,11 +88,11 @@ public class Day1_Rajaruban_Works {
         driver.get(url);
 	}
 	
-	public static String checkIsEvenOrOdd(int val) {
+	protected static String checkIsEvenOrOdd(int val) {
 		return val + " is " + (val % 2 == 0 ?  "Even" : "Odd") + " number.";
 	}
 	
-	public static String findMinAndMax(double[] numArray) {
+	protected static String findMinAndMax(double[] numArray) {
 		double minValue = numArray[0];
 		double maxValue = numArray[0];
 		
@@ -113,7 +109,7 @@ public class Day1_Rajaruban_Works {
 		return "Max value is: " + maxValue + ", \nMin value is: " + minValue;
 	}
 	
-	public static String checkIsPalindrome(String str) {
+	protected static String checkIsPalindrome(String str) {
 		String regex = "[^a-zA-Z]";
 		String formattedStr = str.replaceAll(regex, "").toLowerCase();
 		String[] strArr = formattedStr.split("");
@@ -130,7 +126,7 @@ public class Day1_Rajaruban_Works {
 	}
 	
 	
-	public static long factorialCalculator(long val) {
+	protected static long factorialCalculator(long val) {
 		if(val <= 0 || val > 20) {
 			return 1;
 		}
